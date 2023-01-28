@@ -19,7 +19,6 @@ import '../screen/find_food.dart';
 import '../screen/get_started_screen.dart';
 import '../screen/home_page.dart';
 import '../screen/main_page.dart';
-import '../screen/main_screen.dart';
 import '../screen/orders_page.dart';
 import '../screen/popular_restaurants.dart';
 import '../screen/profile_page.dart';
@@ -67,10 +66,7 @@ Route<RouteSettings> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) =>  SeeAllPopularMenuPage(),
       );
-    case MainScreen.routeName:
-      return MaterialPageRoute(
-        builder: (context) =>  MainScreen(),
-      );
+
     case UpdateProfilePage.routeName:
       return MaterialPageRoute(
         builder: (context) => const UpdateProfilePage(),

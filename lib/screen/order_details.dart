@@ -52,49 +52,54 @@ class _OrderDetailsPageState extends State<OrderDetailsPage> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Fresh Food',
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
-                          ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Fresh Food',
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
                         ),
-                        Text(
-                          'Lovy Foods',
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xFF858C94),
-                          ),
+                      ),
+                      Text(
+                        'Lovy Foods',
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xFF858C94),
                         ),
-                        Text(
-                          '\$33',
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: primaryColor,
-                          ),
+                      ),
+                      Text(
+                        '\$33',
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: primaryColor,
                         ),
+                      ),
 
-                      ],
-                    ),
+                    ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(2),
-                      color: Colors.redAccent.withOpacity(0.2),
-                    ),
-                    child: Center(
-                      child: Icon(Icons.minimize),
-                    ),
-                  ),
+                  Row(
+                    children: [
+                      Container(
+
+                        decoration: BoxDecoration(
+                          color: Colors.redAccent.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        padding: const EdgeInsets.all(10),
+                        child: TextButton(
+                          onPressed: (){},
+                          child: Icon(Icons.minimize_rounded)
+                        )
+                      ),
+                    ],
+                  )
+
                 ],
               ),
             ),

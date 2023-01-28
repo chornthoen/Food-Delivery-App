@@ -14,7 +14,6 @@ import 'find_food.dart';
 import 'forgot_password1_page.dart';
 import 'home_page.dart';
 import 'main_page.dart';
-import 'main_screen.dart';
 import 'order_details.dart';
 import 'payment_method_page.dart';
 import 'reset_password_successe.dart';
@@ -39,7 +38,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 1), () {
       Navigator.pushReplacementNamed(
         context,
-        OrderDetailsPage.routeName,
+        MainPage.routeName,
       );
     });
   }
