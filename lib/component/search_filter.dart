@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import '../common/constants.dart';
 
 class SearchAndFilterWidget extends StatelessWidget {
-  const SearchAndFilterWidget({Key? key}) : super(key: key);
+  const SearchAndFilterWidget({Key? key,  this.onTab}) : super(key: key);
+
+  final VoidCallback? onTab;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20,right: 20),
+      padding: const EdgeInsets.only(left: 0,right: 0),
       child: Row(
         children: [
           Expanded(
@@ -64,9 +66,7 @@ class SearchAndFilterWidget extends StatelessWidget {
               ],
             ),
             child: IconButton(
-              onPressed: () {
-                print('Filter');
-              },
+              onPressed: onTab,
               splashRadius: 1,
               icon: const Icon(
                 Icons.filter_list,

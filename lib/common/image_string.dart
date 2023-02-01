@@ -47,6 +47,21 @@ const String tMixed1Image = "assets/images/mixed1.png";
 
 const String tProfileImage = "assets/images/profile.png";
 
+const String tMapImage = "assets/images/map.png";
+
+const String tMapBorderImage = "assets/images/mapborder.png";
+const String tRestaurantProfileImage = "assets/images/restaurant_pro.png";
+const String tStringRestaurant = "We are one of the best restaurants in the city of Surabaya with years of experience. We serve a lot of quality food cooked directly by professional chefs.";
+
+const String tPizzaImage = "assets/images/pizza.png";
+const String tHamburgerImage = "assets/images/hamburger.png";
+const String tEleanorImage = "assets/images/eleanor.png";
+const String tDarrellImage = "assets/images/darrell.png";
+
+
+
+
+
 
 
 

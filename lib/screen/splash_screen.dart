@@ -9,6 +9,7 @@ import 'package:foods/screen/sign_in_page.dart';
 import 'package:foods/screen/update_photo_profile.dart';
 
 import 'congrate_page.dart';
+import 'deliver_to_page.dart';
 import 'fill_bio_page.dart';
 import 'find_food.dart';
 import 'forgot_password1_page.dart';

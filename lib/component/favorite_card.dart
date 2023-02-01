@@ -6,17 +6,16 @@ import '../models/favorite_model.dart';
 
 class FavoriteCard extends StatelessWidget {
   const FavoriteCard(
-      {Key? key, required this.itemIndex, required this.products})
+      {Key? key, required this.itemIndex, required this.favoriteM})
       : super(key: key);
 
   final int itemIndex;
-  final ProductF products;
+  final FavoriteModel favoriteM;
 
   @override
   Widget build(BuildContext context) {
-    bool index = false;
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
       padding: const EdgeInsets.only(top: 9, bottom: 9, left: 15, right: 20),
       height: 80,
       decoration: BoxDecoration(
@@ -35,7 +34,7 @@ class FavoriteCard extends StatelessWidget {
         children: [
           SizedBox(
             child: Image(
-              image: AssetImage(products.imagePath),
+              image: AssetImage(favoriteM.imagePath),
             ),
           ),
           const SizedBox(
@@ -47,7 +46,7 @@ class FavoriteCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  products.title,
+                  favoriteM.title,
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -55,7 +54,7 @@ class FavoriteCard extends StatelessWidget {
                       ),
                 ),
                 Text(
-                  products.subtitle,
+                  favoriteM.subtitle,
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -63,7 +62,7 @@ class FavoriteCard extends StatelessWidget {
                       ),
                 ),
                 Text(
-                  '\$${products.price}',
+                  '\$${favoriteM.price}',
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -83,7 +82,7 @@ class FavoriteCard extends StatelessWidget {
                   ),
                 ),
                 builder: (context) => Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                   height: 200,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

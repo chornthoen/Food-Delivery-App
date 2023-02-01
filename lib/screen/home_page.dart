@@ -7,7 +7,9 @@ import '../common/image_string.dart';
 import '../component/menu_item.dart';
 import '../component/restaurant_item.dart';
 import '../component/titile_see_all.dart';
+import 'deliver_to_page.dart';
 import 'forgot_password1_page.dart';
+import 'restaurant_profile_page.dart';
 import 'see_all_popular_restaurant_page.dart';
 import 'see_all_popularmenu_page.dart';
 
@@ -90,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                 leadingText: 'Popular Menu',
                 trailingText: 'See All',
                 onTap: () {
-                  Navigator.pushNamed(context, SeeAllMenu.routeName);
+                  Navigator.pushNamed(context, SeeAllPopularMenuPage.routeName);
                 },
               ),
               const SizedBox(

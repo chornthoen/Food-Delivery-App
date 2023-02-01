@@ -4,15 +4,15 @@ import '../common/constants.dart';
 
 class ButtonBackAngTitle extends StatelessWidget {
   const ButtonBackAngTitle({
-    Key? key, required this.title, this.onTap,
+    Key? key,  this.title, this.onTap,
   }) : super(key: key);
-  final String title;
+  final String? title;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+      padding:const EdgeInsets.only(left: 20,right: 20,top: 15),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -38,7 +38,7 @@ class ButtonBackAngTitle extends StatelessWidget {
             width: 15,
           ),
           Text(
-            title,
+            title!,
             style: Theme
                 .of(context)
                 .textTheme

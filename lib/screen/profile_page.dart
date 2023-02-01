@@ -3,10 +3,7 @@ import 'package:foods/common/constants.dart';
 import 'package:foods/common/image_string.dart';
 import 'package:foods/screen/see_all_favorite_page.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-
-import '../component/menu_card.dart';
 import '../component/titile_see_all.dart';
-import '../models/menu_product.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -237,7 +234,7 @@ class ProfilePage extends StatelessWidget {
     required String price,
   }) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       padding: const EdgeInsets.only(top: 9, bottom: 9, left: 15, right: 20),
       height: 80,
       decoration: BoxDecoration(
@@ -248,7 +245,7 @@ class ProfilePage extends StatelessWidget {
             color: Colors.blue.withOpacity(0.05),
             spreadRadius: 1,
             blurRadius: 10,
-            offset: const Offset(0, 10),
+            offset: const Offset(0, 14),
           ),
         ],
       ),

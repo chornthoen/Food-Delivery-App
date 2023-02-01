@@ -3,6 +3,7 @@ import 'package:foods/common/image_string.dart';
 
 import '../common/constants.dart';
 import '../component/search_filter.dart';
+import 'order_details.dart';
 
 class OrdersPage extends StatelessWidget {
   const OrdersPage({Key? key}) : super(key: key);
@@ -45,7 +46,11 @@ class OrdersPage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              const SearchAndFilterWidget(),
+               SearchAndFilterWidget(
+                onTab: (){
+                  Navigator.pushNamed(context, OrderDetailsPage.routeName);
+                },
+              ),
               const SizedBox(
                 height: 30,
               ),

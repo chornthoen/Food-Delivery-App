@@ -1,13 +1,13 @@
 
 import '../common/image_string.dart';
 
-class ProductF {
+class FavoriteModel {
   final int price;
   final String title;
   final String subtitle;
   final String imagePath;
 
-  ProductF({
+  FavoriteModel({
     required this.price,
     required this.title,
     required this.subtitle,
@@ -15,50 +15,50 @@ class ProductF {
   });
 }
 
-List<ProductF> product1 = [
-  ProductF(
+List<FavoriteModel> favoriteModel = [
+  FavoriteModel(
     price: 8,
     title: 'Original',
     subtitle: 'Lovy Food',
     imagePath: tGreenyImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 10,
     title: 'Fresh Salad',
     subtitle: 'Cloudy Recto',
     imagePath: tFreshSaladImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 8,
     title: 'Yummie Ice Cream',
     subtitle: 'Circlo Recto',
     imagePath: tYummieIceCreamImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 11,
     title: 'Vegan Special',
     subtitle: 'Haty Food',
     imagePath: tMediumImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 13,
     title: 'Mixed Pasta',
     subtitle: 'Recto Food',
     imagePath: tMixed1Image,
   ),
-  ProductF(
+  FavoriteModel(
     price: 13,
     title: 'Mixed Pasta',
     subtitle: 'Recto Food',
     imagePath: tMixedImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 11,
     title: 'Vegan Special',
     subtitle: 'Haty Food',
     imagePath: tMediumImage,
   ),
-  ProductF(
+  FavoriteModel(
     price: 8,
     title: 'Yummie Ice Cream',
     subtitle: 'Circlo Recto',

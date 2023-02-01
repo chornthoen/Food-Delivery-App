@@ -17,7 +17,6 @@ class GetStartedPage extends StatelessWidget {
           Stack(
             alignment: Alignment.bottomCenter,
             children: [
-
               Container(
                 height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(

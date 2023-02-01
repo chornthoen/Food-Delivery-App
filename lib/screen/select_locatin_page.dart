@@ -23,9 +23,9 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-             ButtonBackAngTitle(
+            ButtonBackAngTitle(
               title: "Set your location",
-              onTap: (){},
+              onTap: () {},
             ),
             const SizedBox(
               height: 28.5,
@@ -121,7 +121,7 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
             ),
             ButtonWidget(
               text: 'Next',
-              onPressed: (){},
+              onPressed: () {},
             ),
           ],
         ),
