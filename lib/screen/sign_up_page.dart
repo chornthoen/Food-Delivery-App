@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
 import 'package:foods/common/constants.dart';
+import 'package:foods/screen/main_page.dart';
 import 'package:foods/screen/sign_in_page.dart';
 import 'dart:ui';
 
 import '../common/image_string.dart';
+import '../component/button_widget.dart';
 import '../component/labal_star.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -188,19 +190,11 @@ class _SignUpPageState extends State<SignUpPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign up",
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ),
+                  ButtonWidget(
+                    text: 'Sign up',
+                    onPressed: (){
+                      Navigator.pushNamed(context, MainPage.routeName);
+                    },
                   ),
                   const SizedBox(
                     height: 30,

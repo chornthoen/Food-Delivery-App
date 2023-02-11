@@ -52,6 +52,7 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
+                    height: 80,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: ElevatedButton(

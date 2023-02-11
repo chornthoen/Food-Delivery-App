@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
 import 'package:foods/common/image_string.dart';
+import 'package:foods/screen/fill_bio_page.dart';
 import 'package:foods/screen/see_all_favorite_page.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import '../component/titile_see_all.dart';
@@ -139,8 +140,10 @@ class ProfilePage extends StatelessWidget {
                         color: Colors.redAccent.withOpacity(0.2),
                       ),
                       child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.mode),
+                        onPressed: () {
+                          Navigator.pushNamed(context, FillBioPage.routeName);
+                        },
+                        icon: const Icon(Icons.mode),
                         color: primaryColor,
                       ),
                     )

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:foods/component/title_widget.dart';
 import '../common/constants.dart';
-import '../common/image_string.dart';
 import '../component/button_and_title.dart';
 import '../component/button_widget.dart';
-import 'forgot_password_page.dart';
 
 class ForgotPasswordSelect extends StatefulWidget {
   const ForgotPasswordSelect({Key? key}) : super(key: key);
@@ -19,210 +17,93 @@ class _ForgotPasswordSelectState extends State<ForgotPasswordSelect> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 45),
+      body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             ButtonBackAngTitle(
+            ButtonBackAngTitle(
               title: "forgot password?",
-              onTap: (){},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             const SizedBox(
-              height: 28.5,
+              height: 24,
             ),
-            Text(
-              'Select which contact details should we use to reset your password',
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                    fontSize: 14,
-                    color: blackColor,
-                    fontWeight: FontWeight.w400,
-                  ),
+            const TitleName(
+              title:
+                  'Select which contact details should we use to reset your password',
             ),
             const SizedBox(
               height: 24,
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: 128,
-              decoration: const BoxDecoration(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 10,
+              ),
+              height: 100,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
-                border: Border.fromBorderSide(
-                  BorderSide(
-                    color: Color(0xffFF1843),
-                    width: 2,
-                  ),
+                border: Border.all(
+                  color: Colors.red,
+                  width: 2,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 26,
-                    offset: Offset(0, 15),
-                  )
+                    color: Colors.blue.withOpacity(0.08),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: const Offset(0, 15),
+                  ),
                 ],
               ),
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: 78,
-                          height: 78,
-                          padding: const EdgeInsets.only(top: 2),
-                          decoration: BoxDecoration(
-                            color: const Color(0xffF2F2F2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                        Positioned(
-                          top: 0,
-                          left: 0,
-                          child: Container(
-                            width: 78,
-                            height: 78,
-                            padding: const EdgeInsets.only(
-                              top: 0.5,
-                              left: 3,
-                              right: 3,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.redAccent.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, ForgotPasswordPage.routeName);
-                              },
-                              icon: const Icon(
-                                Icons.chat,
-                                color: Color(0xFFF43F5E),
-                                size: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                    decoration: BoxDecoration(
+                      color: Colors.redAccent.withOpacity(0.2),
+                      shape: BoxShape.circle,
                     ),
+                    padding: const EdgeInsets.all(20),
+                    child: const Center(
+                      child: Icon(
+                        Icons.chat,
+                        size: 26,
+                        color: primaryColor,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "via SMS:",
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0xFF6D7580)),
+                        'via SMS:',
+                        style:
+                            Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.grey,
+                                ),
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 5,
                       ),
                       Text(
-                        "+6282******39",
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                            color: Color(0xFF09101D)),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 128,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
-                border: Border.fromBorderSide(
-                  BorderSide(
-                    color: Color(0xffEBEEF2),
-                  ),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 26,
-                    offset: Offset(0, 15),
-                  )
-                ],
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: 78,
-                          height: 78,
-                          padding: const EdgeInsets.only(top: 2),
-                          decoration: BoxDecoration(
-                            color: const Color(0xffF2F2F2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                        Positioned(
-                          top: 0,
-                          left: 0,
-                          child: Container(
-                            width: 78,
-                            height: 78,
-                            padding: const EdgeInsets.only(
-                              top: 0.5,
-                              left: 3,
-                              right: 3,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.redAccent.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.email,
-                                color: Color(0xFFF43F5E),
-                                size: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "via Email:",
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0xFF6D7580)),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        "ex***le@yourdomain.com",
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16,
-                            color: Color(0xFF09101D)),
+                        '+6282******39',
+                        style:
+                            Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black,
+                                ),
                       ),
                     ],
                   )
@@ -230,11 +111,86 @@ class _ForgotPasswordSelectState extends State<ForgotPasswordSelect> {
               ),
             ),
             const SizedBox(
-              height: 200,
+              height: 24,
             ),
-            ButtonWidget(
-              text: 'Next',
-              onPressed: (){},
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 10,
+              ),
+              height: 100,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(0.08),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: const Offset(0, 15),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.redAccent.withOpacity(0.2),
+                      shape: BoxShape.circle,
+                    ),
+                    padding: const EdgeInsets.all(20),
+                    child: const Center(
+                      child: Icon(
+                        Icons.email,
+                        size: 26,
+                        color: primaryColor,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'via Email',
+                        style:
+                            Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.grey,
+                                ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'ex***le@yourdomain.com',
+                        style:
+                            Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black,
+                                ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const Spacer(),
+            Padding(
+              padding:const EdgeInsets.symmetric(horizontal: 20),
+              child: ButtonWidget(
+                text: 'Next',
+                onPressed: () {},
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),

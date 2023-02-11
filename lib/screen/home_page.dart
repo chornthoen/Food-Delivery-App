@@ -336,10 +336,10 @@ class _HomePageState extends State<HomePage> {
 
 
 
-class RestaurantModel {
-  final String title;
-  final String subtitle;
-  final String imagePath;
-
-  RestaurantModel(this.title, this.subtitle, this.imagePath);
-}
+// class RestaurantModel {
+//   final String title;
+//   final String subtitle;
+//   final String imagePath;
+//
+//   RestaurantModel(this.title, this.subtitle, this.imagePath);
+// }

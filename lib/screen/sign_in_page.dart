@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
-import 'package:foods/common/constants.dart';
-import 'package:foods/screen/forgot_password_page.dart';
 import 'package:foods/screen/sign_up_page.dart';
 import 'dart:ui';
 
-import '../common/constants.dart';
-import '../common/constants.dart';
 import '../common/image_string.dart';
+import '../component/button_widget.dart';
 import '../component/labal_star.dart';
 import 'forgot_password1_page.dart';
+import 'main_page.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -194,19 +192,11 @@ class _SignInPageState extends State<SignInPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign in",
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ),
+                  ButtonWidget(
+                    text: 'Sign in',
+                    onPressed: (){
+                      Navigator.pushNamed(context, MainPage.routeName);
+                    },
                   ),
                   TextButton(
                     onPressed: () {
@@ -317,9 +307,6 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                       ),
                     ],
-                  ),
-                  const SizedBox(
-                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
