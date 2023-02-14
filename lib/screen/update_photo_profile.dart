@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:foods/component/title_widget.dart';
 import '../common/constants.dart';
 import '../common/image_string.dart';
 import '../component/button_and_title.dart';
@@ -18,26 +18,21 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 45),
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-             ButtonBackAngTitle(
+            ButtonBackAngTitle(
               title: "Update your Photo",
-              onTap: (){},
+              onTap: () {},
             ),
             const SizedBox(
-              height: 28.5,
+              height: 20,
             ),
-            Text(
-              'This data will be displayed in your account profile for security',
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                fontSize: 14,
-                color: blackColor,
-                fontWeight: FontWeight.w400,
-              ),
+            const TitleName(
+              title:
+                  'This data will be displayed in your account profile for security',
             ),
             const SizedBox(
               height: 20,
@@ -53,7 +48,7 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
                   ),
                 ),
                 Positioned(
-                  right:65,
+                  right: 84,
                   bottom: 1,
                   child: Container(
                     width: 50,
@@ -68,9 +63,7 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: IconButton(
-                      onPressed: () {
-                        print('location');
-                      },
+                      onPressed: () {},
                       icon: const Icon(
                         Icons.mode,
                         color: Colors.white,
@@ -81,12 +74,16 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 295,
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ButtonWidget(
+                text: 'Next',
+                onPressed: () {},
+              ),
             ),
-            ButtonWidget(
-              text: 'Next',
-              onPressed: (){},
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foods/screen/notification_page.dart';
+import 'package:foods/screen/payment_method_page.dart';
 import 'package:foods/screen/see_all_menu.dart';
 
 import '../common/constants.dart';
@@ -12,6 +13,9 @@ import 'forgot_password1_page.dart';
 import 'restaurant_profile_page.dart';
 import 'see_all_popular_restaurant_page.dart';
 import 'see_all_popularmenu_page.dart';
+import 'select_locatin_page.dart';
+import 'set_location_page.dart';
+import 'update_photo_profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -295,7 +299,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, NotificationPage.routeName);
+                    Navigator.pushNamed(context, SetLocationPage.routeName);
                   },
                   splashRadius: 1,
                   icon: const Icon(

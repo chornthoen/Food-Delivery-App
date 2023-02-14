@@ -21,77 +21,82 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 45),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                 ButtonBackAngTitle(
-                  title: "forgot password",
-                  onTap: (){},
-                ),
-                const SizedBox(
-                  height: 190,
-                ),
-                Text(
-                  'Code has been send to +6282******39',
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+               ButtonBackAngTitle(
+                title: "forgot password",
+                onTap: (){
+                  Navigator.pop(context);
+                },
+              ),
+              const SizedBox(
+                height: 190,
+              ),
+              Text(
+                'Code has been send to +6282******39',
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: blackColor,
+                    ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  Otp(),
+                  Otp(),
+                  Otp(),
+                  Otp(),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Resend code in',
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
                         color: blackColor,
-                      ),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Otp(),
-                    Otp(),
-                    Otp(),
-                    Otp(),
-                  ],
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Resend code in',
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: blackColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
-                    ),
-                    Text(
-                      ' 56',
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
-                    ),
-                    Text(
-                      ' s',
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: blackColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-                 const SizedBox(
-                  height: 200,
-                ),
-                ButtonWidget(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    ' 56',
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                        color: primaryColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    ' s',
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                        color: blackColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400),
+                  ),
+                ],
+              ),
+               const SizedBox(
+                height: 240,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ButtonWidget(
                   text: 'Next',
                   onPressed: (){},
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+            ],
           ),
         ),
       ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:foods/component/title_widget.dart';
 
 import '../common/constants.dart';
 import '../component/button_and_title.dart';
 import '../component/button_widget.dart';
+import 'calling_success_page.dart';
 
 class SelectLocationPage extends StatefulWidget {
   const SelectLocationPage({Key? key}) : super(key: key);
@@ -17,8 +19,7 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 45),
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -28,20 +29,16 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
               onTap: () {},
             ),
             const SizedBox(
-              height: 28.5,
+              height: 20,
             ),
-            Text(
-              'This data will be displayed in your account profile for security',
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                    fontSize: 14,
-                    color: blackColor,
-                    fontWeight: FontWeight.w400,
-                  ),
+            const TitleName(
+              title: 'This data will be displayed in your account profile for security',
             ),
             const SizedBox(
               height: 24,
             ),
             Container(
+              margin:const EdgeInsets.symmetric(horizontal: 20),
               width: MediaQuery.of(context).size.width,
               height: 160,
               decoration: const BoxDecoration(
@@ -66,45 +63,26 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                        width: 78,
-                        height: 78,
-                        padding: const EdgeInsets.only(top: 2),
-                        decoration: BoxDecoration(
-                          color: const Color(0xffF2F2F2),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        left: 0,
-                        child: Container(
-                          width: 78,
-                          height: 78,
-                          padding: const EdgeInsets.only(
-                            top: 0.5,
-                            left: 3,
-                            right: 3,
+                  Container(
+                    margin:const EdgeInsets.symmetric(horizontal: 10),
+                    decoration:  BoxDecoration(
+                      color: Colors.redAccent.withOpacity(0.2),
+                      shape: BoxShape.circle,
+                    ),
+                    padding: const EdgeInsets.all(6),
+                    child: Center(
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, CallingSuccessPage.routeName);
+                          },
+                          icon:const  Icon(
+                            Icons.location_on,
+                            color: Colors.redAccent,
                           ),
-                          decoration: BoxDecoration(
-                            color: Colors.redAccent.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child: IconButton(
-                            onPressed: () {
-                              print('location');
-                            },
-                            icon: const Icon(
-                              Icons.location_on,
-                              color: Color(0xFFF43F5E),
-                              size: 30,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                        )),
+                  ),
+                  const SizedBox(
+                    height: 10,
                   ),
                   Text(
                     "Set location",
@@ -116,12 +94,16 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 330,
+            const Spacer(),
+            Padding(
+              padding:const EdgeInsets.symmetric(horizontal: 20),
+              child: ButtonWidget(
+                text: 'Next',
+                onPressed: () {},
+              ),
             ),
-            ButtonWidget(
-              text: 'Next',
-              onPressed: () {},
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),

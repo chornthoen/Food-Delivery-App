@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foods/component/title_widget.dart';
+import 'package:foods/screen/forgot_password_page.dart';
 import '../common/constants.dart';
 import '../component/button_and_title.dart';
 import '../component/button_widget.dart';
@@ -186,7 +187,9 @@ class _ForgotPasswordSelectState extends State<ForgotPasswordSelect> {
               padding:const EdgeInsets.symmetric(horizontal: 20),
               child: ButtonWidget(
                 text: 'Next',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ForgotPasswordPage.routeName);
+                },
               ),
             ),
             const SizedBox(

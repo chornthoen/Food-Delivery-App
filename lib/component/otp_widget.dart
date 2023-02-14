@@ -7,11 +7,11 @@ class Otp extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: 50,
+      width: 60,
       child: Container(
         padding: const EdgeInsets.only(
           top: 18,
-          left: 15,
+          left: 20,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
@@ -20,11 +20,11 @@ class Otp extends StatelessWidget {
             color: const Color(0xFFEBEEF2),
             width: 1,
           ),
-          boxShadow: const [
+          boxShadow:  [
             BoxShadow(
-              color: Colors.black12,
-              blurRadius: 20,
-              offset: Offset(0, 10),
+              color: Colors.blue.withOpacity(0.05),
+              blurRadius: 18,
+              offset: const Offset(0, 10),
             ),
           ],
         ),
