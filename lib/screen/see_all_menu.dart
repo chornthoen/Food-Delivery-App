@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
-import 'package:foods/models/menu_product.dart';
+import 'package:foods/models/see_all_menu_models.dart';
 import '../component/button_and_title.dart';
 import '../component/menu_card.dart';
 import '../component/search_filter.dart';
@@ -68,10 +68,10 @@ class _SeeAllMenuState extends State<SeeAllMenu> {
               child: Stack(
                 children: [
                   ListView.builder(
-                    itemCount: product.length,
+                    itemCount: seeAllMenus.length,
                     itemBuilder: (context, index) => MenuCard(
                       itemIndex: index,
-                      product: product[index],
+                      product: seeAllMenus[index],
 
                     ),
                   ),

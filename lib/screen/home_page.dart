@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                 leadingText: 'Popular Menu',
                 trailingText: 'See All',
                 onTap: () {
-                  Navigator.pushNamed(context, SeeAllPopularMenuPage.routeName);
+                  Navigator.pushNamed(context, SeeAllMenu.routeName);
                 },
               ),
               const SizedBox(
@@ -338,12 +338,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-
-
-// class RestaurantModel {
-//   final String title;
-//   final String subtitle;
-//   final String imagePath;
-//
-//   RestaurantModel(this.title, this.subtitle, this.imagePath);
-// }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/constants.dart';
-import '../models/menu_product.dart';
+import '../models/see_all_menu_models.dart';
 
 class MenuCard extends StatelessWidget {
   const MenuCard({
@@ -10,7 +10,7 @@ class MenuCard extends StatelessWidget {
   }) : super(key: key);
 
   final int itemIndex;
-  final Product product;
+  final SeeAllMenuModel product;
   final VoidCallback? onPress;
   @override
   Widget build(BuildContext context) {
