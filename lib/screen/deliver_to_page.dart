@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
 import 'package:foods/screen/payment_method_1.dart';
 
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 
 class DeliverToPage extends StatefulWidget {
   const DeliverToPage({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _DeliverToPageState extends State<DeliverToPage> {
           margin:const EdgeInsets.only(bottom: 24),
           child: Column(
             children: [
-              ButtonBackAngTitle(
+              ButtonBackAndTitle(
                 title: 'Deliver to',
                 onTap: () {
                   Navigator.pop(context);

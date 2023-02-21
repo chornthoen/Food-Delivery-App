@@ -2,7 +2,7 @@
 //
 // import '../common/constants.dart';
 // import '../common/image_string.dart';
-// import '../component/button_and_title.dart';
+// import '../component/button_back_and_title.dart';
 // import '../component/restaurant_item.dart';
 //
 // class SeeAllPopularRestaurant extends StatefulWidget {

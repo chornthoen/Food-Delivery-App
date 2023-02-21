@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
 import 'package:foods/models/see_all_menu_models.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/menu_card.dart';
 import '../component/search_filter.dart';
 
@@ -21,7 +21,7 @@ class _SeeAllMenuState extends State<SeeAllMenu> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Popular Menu",
               onTap: () {
                 Navigator.pop(context);

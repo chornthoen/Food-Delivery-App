@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "686632936935",
+    "project_id": "food-delivery-app-115e2",
+    "storage_bucket": "food-delivery-app-115e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686632936935:android:3e9accd843ce5549b60942",
+        "android_client_info": {
+          "package_name": "com.thoen.foods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686632936935-f690ocphlmrs97ol6uqta2ba0iv58q1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE6Rp0UH8kuYRsR3OZhuv6oAHw3jUcfV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686632936935-f690ocphlmrs97ol6uqta2ba0iv58q1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

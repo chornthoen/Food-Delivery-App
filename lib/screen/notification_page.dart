@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 
 class NotificationPage extends StatefulWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _NotificationPageState extends State<NotificationPage> {
       body: SafeArea(
         child: Column(
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Notification",
               onTap: () {
                 Navigator.pop(context);

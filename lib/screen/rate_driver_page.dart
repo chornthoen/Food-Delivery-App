@@ -4,7 +4,7 @@ import 'package:foods/component/button_widget.dart';
 import 'package:foods/screen/rate_meal_page.dart';
 
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 
 class RateDriverPage extends StatefulWidget {
   const RateDriverPage({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class _RateDriverPageState extends State<RateDriverPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ButtonBackAngTitle(
+              ButtonBackAndTitle(
                 title: '',
                 onTap: () {
                   Navigator.pop(context);

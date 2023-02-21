@@ -1,8 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:foods/component/title_widget.dart';
 import 'package:foods/screen/forgot_password_page.dart';
 import '../common/constants.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
 
 class ForgotPasswordSelect extends StatefulWidget {
@@ -23,7 +25,7 @@ class _ForgotPasswordSelectState extends State<ForgotPasswordSelect> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "forgot password?",
               onTap: () {
                 Navigator.pop(context);

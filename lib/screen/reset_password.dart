@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../common/constants.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
-import '../component/labal_star.dart';
+import '../component/check_box_widget.dart';
+import '../component/label_and_star.dart';
+import '../component/text_field_input.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   const ResetPasswordPage({Key? key}) : super(key: key);
@@ -21,167 +23,78 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 45),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ButtonBackAngTitle(
-                  title: "Reset Password",
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  height: 28.5,
-                ),
-                Text(
-                  'Create a new password',
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                        color: blackColor,
-                      ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                const ContainerLabaleWiget(
-                  name: "New Password",
-                  star: "*",
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 25,
-                        offset: Offset(1, 10),
-                      )
-                    ],
-                  ),
-                  //height: 60,
-                  child: TextField(
-                    obscureText: true,
-                    keyboardType: TextInputType.datetime,
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: const Color(0xFF09101D),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                    decoration: InputDecoration(
-                      suffixIcon: const Icon(Icons.visibility_off_rounded),
-                      border: InputBorder.none,
-                      contentPadding: const EdgeInsets.only(
-                        left: 24,
-                        top: 11,
-                      ),
+          child: Column(
+            children: [
+              ButtonBackAndTitle(
+                title: "Reset Password",
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Create a new password',
+                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: blackColor,
+                          ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const ContainerLabelWidget(
+                      name: "New Password",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
                       hintText: "New Password",
-                      hintStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFFDADEE3),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
+                      icon: Icons.visibility_off_rounded,
+                      obscureText: true,
                     ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                const ContainerLabaleWiget(
-                  name: "Confirm New Password",
-                  star: "*",
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 25,
-                        offset: Offset(1, 10),
-                      )
-                    ],
-                  ),
-                  //height: 60,
-                  child: TextField(
-                    obscureText: true,
-                    keyboardType: TextInputType.datetime,
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: const Color(0xFF09101D),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                    decoration: InputDecoration(
-                      suffixIcon: const Icon(Icons.visibility_off_rounded),
-                      border: InputBorder.none,
-                      contentPadding: const EdgeInsets.only(
-                        left: 24,
-                        top: 11,
-                      ),
+                    const ContainerLabelWidget(
+                      name: "Confirm New Password",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
                       hintText: "Confirm New Password",
-                      hintStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFFDADEE3),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
+                      icon: Icons.visibility_off_rounded,
+                      obscureText: true,
                     ),
-                  ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    CheckBoxWidget(
+                      text: 'Remember me',
+                      value: isRememderMe,
+                      onChanged: (value) {
+                        setState(() {
+                          isRememderMe = value!;
+                        });
+                      },
+                    ),
+                    const SizedBox(
+                      height: 340,
+                    ),
+                    ButtonWidget(
+                      text: 'Save',
+                      onPressed: () {},
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                  ],
                 ),
-                const SizedBox(
-                  height: 24,
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  height: 16,
-                  child: Row(
-                    children: [
-                      Theme(
-                        data: ThemeData(unselectedWidgetColor: primaryColor),
-                        child: Checkbox(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          value: isRememderMe,
-                          checkColor: Colors.white,
-                          activeColor: primaryColor,
-                          onChanged: (value) {
-                            setState(() {
-                              isRememderMe = value!;
-                            });
-                          },
-                        ),
-                      ),
-                      Text(
-                        "Remember me",
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: neutral1Color,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 306,
-                ),
-                ButtonWidget(
-                  text: 'Save',
-                  onPressed: () {},
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

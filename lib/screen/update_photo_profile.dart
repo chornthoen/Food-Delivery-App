@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foods/component/title_widget.dart';
 import '../common/constants.dart';
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
 
 class UpdateProfilePage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Update your Photo",
               onTap: () {},
             ),

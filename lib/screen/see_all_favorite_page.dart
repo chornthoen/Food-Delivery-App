@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foods/component/button_and_title.dart';
+import 'package:foods/component/button_back_and_title.dart';
 import '../common/constants.dart';
 import '../component/favorite_card.dart';
 import '../models/favorite_model.dart';
@@ -30,7 +30,7 @@ class _SeeAllFavoritePageState extends State<SeeAllFavoritePage> {
       body: SafeArea(
         child: Column(
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Favorite",
               onTap: () {
                 Navigator.pop(context);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
 import 'package:foods/common/image_string.dart';
-import 'package:foods/component/button_and_title.dart';
+import 'package:foods/component/button_back_and_title.dart';
 import 'package:foods/screen/calling_page.dart';
 
 class MessagePage extends StatefulWidget {
@@ -19,7 +19,7 @@ class _MessagePageState extends State<MessagePage> {
       body: SafeArea(
         child: Column(
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Chat",
               onTap: () {
                 Navigator.pop(context);

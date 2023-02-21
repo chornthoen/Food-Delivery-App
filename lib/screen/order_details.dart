@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:foods/common/image_string.dart';
-import 'package:foods/component/button_and_title.dart';
+import 'package:foods/component/button_back_and_title.dart';
 import 'package:foods/component/search_filter.dart';
 
 import '../common/constants.dart';
@@ -22,7 +22,7 @@ class _OrderDetailsPageState extends State<OrderDetailsPage> {
       body: SafeArea(
         child: Column(
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: 'Order Details',
               onTap: () {
                 Navigator.pop(context);

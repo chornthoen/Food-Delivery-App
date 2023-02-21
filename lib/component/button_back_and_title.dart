@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../common/constants.dart';
 
-class ButtonBackAngTitle extends StatelessWidget {
-  const ButtonBackAngTitle({
+class ButtonBackAndTitle extends StatelessWidget {
+  const ButtonBackAndTitle({
     Key? key,  this.title, this.onTap,
   }) : super(key: key);
   final String? title;

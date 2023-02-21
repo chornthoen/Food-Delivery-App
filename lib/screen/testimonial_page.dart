@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foods/common/constants.dart';
-import 'package:foods/component/button_and_title.dart';
+import 'package:foods/component/button_back_and_title.dart';
 
 import '../component/testimonial_card.dart';
 import '../models/testimonials_model.dart';
@@ -21,7 +21,7 @@ class _TestimonialPageState extends State<TestimonialPage> {
       body: SafeArea(
         child: Column(
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: 'Testimonial',
               onTap: () {
                 Navigator.pop(context);

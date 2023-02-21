@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foods/component/title_widget.dart';
 
 import '../common/constants.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
 import 'calling_success_page.dart';
 
@@ -24,7 +24,7 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Set your location",
               onTap: () {},
             ),

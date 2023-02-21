@@ -5,7 +5,11 @@ import 'dart:ui';
 
 import '../common/image_string.dart';
 import '../component/button_widget.dart';
-import '../component/labal_star.dart';
+import '../component/button_with_app.dart';
+import '../component/check_box_widget.dart';
+import '../component/label_and_star.dart';
+import '../component/text_field_input.dart';
+import '../component/title_and_button.dart';
 import 'forgot_password1_page.dart';
 import 'main_page.dart';
 
@@ -21,8 +25,15 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   bool isRememderMe = false;
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  late TextEditingController _emailController;
+  late TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,135 +70,34 @@ class _SignInPageState extends State<SignInPage> {
                       ],
                     ),
                   ),
-                  const ContainerLabaleWiget(
+                  const ContainerLabelWidget(
                     name: "Email",
                     star: "*",
                   ),
-                  const SizedBox(
-                    height: 10,
+                  TextFieldInput(
+                    hintText: 'Email or Phone Number',
+                    controller: _emailController,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 25,
-                          offset: Offset(1, 10),
-                        )
-                      ],
-                    ),
-                    // height: 60,
-                    child: TextField(
-                      controller: _emailController,
-                      keyboardType: TextInputType.emailAddress,
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.only(left: 24),
-                        hintText: 'Email or Phone Number',
-                        hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                                  color: const Color(0xFFDADEE3),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const ContainerLabaleWiget(
+                  const ContainerLabelWidget(
                     name: "Password",
                     star: "*",
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 25,
-                          offset: Offset(1, 10),
-                        )
-                      ],
-                    ),
-                    //height: 60,
-                    child: TextField(
-                      controller: _passwordController,
-                      obscureText: true,
-                      keyboardType: TextInputType.text,
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                      decoration: InputDecoration(
-                        suffixIcon: const Icon(
-                          Icons.visibility,
-                          color: Color(0xFF858C94),
-                        ),
-                        border: InputBorder.none,
-                        contentPadding: const EdgeInsets.only(
-                          left: 24,
-                          top: 14,
-                        ),
-                        hintText: 'Password',
-                        hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                                  color: const Color(0xFFDADEE3),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                      ),
-                    ),
+                  TextFieldInput(
+                    hintText: 'Password',
+                    controller: _passwordController,
+                    icon: Icons.visibility,
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    padding: const EdgeInsets.only(
-                      left: 8,
-                    ),
-                    height: 16,
-                    child: Row(
-                      children: [
-                        Theme(
-                          data: ThemeData(unselectedWidgetColor: primaryColor),
-                          child: Checkbox(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            value: isRememderMe,
-                            checkColor: Colors.white,
-                            activeColor: primaryColor,
-                            onChanged: (value) {
-                              setState(() {
-                                isRememderMe = value!;
-                              });
-                            },
-                          ),
-                        ),
-                        Text(
-                          "Remember me",
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                                color: neutral1Color,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                      ],
-                    ),
+                  CheckBoxWidget(
+                    text: 'Remember me',
+                    value: isRememderMe,
+                    onChanged: (value) {
+                      setState(() {
+                        isRememderMe = value!;
+                      });
+                    },
                   ),
                   const SizedBox(
                     height: 20,
@@ -221,118 +131,29 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 150,
-                        height: 45,
-                        decoration: const BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 26,
-                              offset: Offset(0, 15),
-                            )
-                          ],
-                        ),
-                        child: OutlinedButton.icon(
-                          onPressed: () {},
-                          icon: const Image(
-                            image: AssetImage(tIconBFImage),
-                            width: 25,
-                            height: 20,
-                          ),
-                          label: Text(
-                            "Facebook",
-                            style:
-                                Theme.of(context).textTheme.subtitle1!.copyWith(
-                                      color: const Color(0xFF09051C),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                          ),
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(
-                              color: Color(0xFFF4F6F9),
-                            ),
-                            backgroundColor: Colors.white,
-                            shadowColor: Colors.black,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                        ),
+                      ButtonWithApp(
+                        name: "Facebook",
+                        imagePath: tIconBFImage,
+                        onPressed: () {},
                       ),
-                      Container(
-                        width: 150,
-                        height: 45,
-                        decoration: const BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 26,
-                              offset: Offset(0, 15),
-                            )
-                          ],
-                        ),
-                        child: OutlinedButton.icon(
-                          onPressed: () {},
-                          icon: const Image(
-                            image: AssetImage(tIconGoogleImage),
-                            width: 25,
-                            height: 20,
-                          ),
-                          label: Text(
-                            "Google",
-                            style:
-                                Theme.of(context).textTheme.subtitle1!.copyWith(
-                                      color: const Color(0xFF09051C),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                          ),
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(
-                              color: Color(0xFFF4F6F9),
-                            ),
-                            backgroundColor: Colors.white,
-                            shadowColor: Colors.black,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                        ),
+                      ButtonWithApp(
+                        name: "Google",
+                        imagePath: tIconGoogleImage,
+                        onPressed: () {},
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have an account?",
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                              color: const Color(0xFF858C94),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                            ),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, SignUpPage.routeName);
-                        },
-                        child: Text(
-                          "Sign up",
-                          style: Theme.of(context).textTheme.headline5!.copyWith(
-                                color: const Color(0xFFF43F5E),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                      )
-                    ],
+                  TitleAndButton(
+                    text: "Don't have an account?",
+                    buttonText: "Sign in",
+                    onPressed: () {
+                      Navigator.pushNamed(context, SignUpPage.routeName);
+                    },
                   ),
                 ],
               ),

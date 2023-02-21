@@ -3,7 +3,7 @@ import 'package:foods/component/title_widget.dart';
 
 import '../common/constants.dart';
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
 
 class PaymentMethodPage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
       body: SafeArea(
         child: Column(
           children: [
-             ButtonBackAngTitle(
+             ButtonBackAndTitle(
               title: "Payment Method",
               onTap: (){
                 Navigator.pop(context);

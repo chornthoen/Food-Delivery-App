@@ -3,7 +3,7 @@ import 'package:foods/common/constants.dart';
 import 'package:foods/component/button_widget.dart';
 
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 import 'rate_driver_page.dart';
 
 class OrderCompletedPage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _OrderCompletedPageState extends State<OrderCompletedPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ButtonBackAngTitle(
+              ButtonBackAndTitle(
                 title: '',
                 onTap: () {
                   Navigator.pop(context);

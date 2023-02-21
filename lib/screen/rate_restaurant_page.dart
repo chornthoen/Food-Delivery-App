@@ -3,7 +3,7 @@ import 'package:foods/common/constants.dart';
 import 'package:foods/component/button_widget.dart';
 
 import '../common/image_string.dart';
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 
 class RateRestaurantPage extends StatefulWidget {
   const RateRestaurantPage({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _RateRestaurantPageState extends State<RateRestaurantPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ButtonBackAngTitle(
+              ButtonBackAndTitle(
                 title: '',
                 onTap: () {
                   Navigator.pop(context);

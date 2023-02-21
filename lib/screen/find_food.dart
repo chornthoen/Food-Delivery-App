@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foods/component/button_and_title.dart';
+import 'package:foods/component/button_back_and_title.dart';
 
 import '../common/constants.dart';
 import '../component/button_widget.dart';
@@ -23,7 +23,7 @@ class _FindFoodPageState extends State<FindFoodPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ButtonBackAngTitle(
+            ButtonBackAndTitle(
               title: "Find your Food",
               onTap: () {},
             ),

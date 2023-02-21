@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
-import '../common/constants.dart';
-import '../component/button_and_title.dart';
+import 'package:foods/screen/menu_details_page.dart';
+import '../component/button_back_and_title.dart';
 import '../component/button_widget.dart';
-import '../component/labal_star.dart';
+import '../component/label_and_star.dart';
+import '../component/text_field_input.dart';
 import '../component/title_widget.dart';
 
 class FillBioPage extends StatefulWidget {
@@ -18,319 +18,81 @@ class _FillBioPageState extends State<FillBioPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Column(
-              children: [
-                ButtonBackAngTitle(
-                  title: "Fill in your bio",
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+          child: Column(
+            children: [
+              ButtonBackAndTitle(
+                title: "Fill in your bio",
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const TitleName(
+                title: 'This data will be displayed in your account profile for security',
+              ),
+              Padding(
+                padding:const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    const ContainerLabelWidget(
+                      name: "Full Name",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Full Name',
+                    ),
+                    const ContainerLabelWidget(
+                      name: "Nick Name",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Nick Name',
+                    ),
+                    const ContainerLabelWidget(
+                      name: "Phone Number",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Phone Number',
+                    ),
+                    const ContainerLabelWidget(
+                      name: "Gender",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Gender',
+                    ),
+                    const ContainerLabelWidget(
+                      name: "Date of Birt",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Date of Birt',
+                    ),
+                    const ContainerLabelWidget(
+                      name: "Address",
+                      star: "*",
+                    ),
+                    const TextFieldInput(
+                      hintText: 'Address',
+                    ),
+                    const SizedBox(
+                      height: 26,
+                    ),
+                    ButtonWidget(
+                      text: 'Next',
+                      onPressed: (){
+                        Navigator.pushNamed(context, MenuDetailPage.routeName);
+                      },
+                    ),
+                  ],
                 ),
-                const SizedBox(
-                  height: 26,
-                ),
-                const TitleName(
-                  title: 'This data will be displayed in your account profile for security',
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding:const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      const ContainerLabaleWiget(
-                        name: "Full Name",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45.5,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        // height: 60,
-                        child: TextField(
-                          //controller: _emailController,
-                          keyboardType: TextInputType.name,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(left: 24,top: -1),
-                            hintText: 'Full Name',
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const ContainerLabaleWiget(
-                        name: "Nick Name",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45.5,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        // height: 60,
-                        child: TextField(
-                          //controller: _emailController,
-                          keyboardType: TextInputType.name,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(left: 24,top: -1),
-                            hintText: 'Nick Name',
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const ContainerLabaleWiget(
-                        name: "Phone Number",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45.5,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        // height: 60,
-                        child: TextField(
-                          //controller: _emailController,
-                          keyboardType: TextInputType.name,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(left: 24,top: -1),
-                            hintText: 'Phone Number',
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const ContainerLabaleWiget(
-                        name: "Gender",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        //height: 60,
-                        child: TextField(
-                          obscureText: true,
-                          keyboardType: TextInputType.datetime,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            suffixIcon:  const Icon(Icons.arrow_drop_down),
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(
-                              left: 24,
-                              top: 11,
-                            ),
-                            hintText: "Gender",
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const ContainerLabaleWiget(
-                        name: "Date of Birt",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        //height: 60,
-                        child: TextField(
-                          obscureText: true,
-                          keyboardType: TextInputType.datetime,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            suffixIcon:  const Icon(Icons.date_range),
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(
-                              left: 24,
-                              top: 11,
-                            ),
-                            hintText: "Date of Birt",
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const ContainerLabaleWiget(
-                        name: "Address",
-                        star: "*",
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        height: 45.5,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 25,
-                              offset: Offset(1, 10),
-                            )
-                          ],
-                        ),
-                        // height: 60,
-                        child: TextField(
-                          //controller: _emailController,
-                          keyboardType: TextInputType.name,
-                          style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            color: const Color(0xFF09101D),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(left: 24,top: -1),
-                            hintText: 'Address',
-                            hintStyle:
-                            Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: const Color(0xFFDADEE3),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      ButtonWidget(
-                        text: 'Next',
-                        onPressed: (){},
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

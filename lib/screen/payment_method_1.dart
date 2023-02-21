@@ -3,7 +3,7 @@ import 'package:foods/common/constants.dart';
 import 'package:foods/common/image_string.dart';
 import 'package:foods/screen/set_location.dart';
 
-import '../component/button_and_title.dart';
+import '../component/button_back_and_title.dart';
 
 class PaymentMethod1Page extends StatefulWidget {
   const PaymentMethod1Page({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class _PaymentMethod1PageState extends State<PaymentMethod1Page> {
           margin: const EdgeInsets.only(bottom: 24),
           child: Column(
             children: [
-              ButtonBackAngTitle(
+              ButtonBackAndTitle(
                 title: 'Deliver to',
                 onTap: () {
                   Navigator.pop(context);

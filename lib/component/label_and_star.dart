@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../common/constants.dart';
-class ContainerLabaleWiget extends StatelessWidget {
-  const ContainerLabaleWiget({
+class ContainerLabelWidget extends StatelessWidget {
+  const ContainerLabelWidget({
     Key? key, required this.name, required this.star,
   }) : super(key: key);
   final String name;
@@ -12,6 +11,7 @@ class ContainerLabaleWiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.only(top: 14, bottom: 8),
       alignment: Alignment.topLeft,
       child: Row(
         children: [
